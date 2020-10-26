@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txtEntrada1" type="number" checked name="numero" />
+    <input id="txtEntrada2" type="number" name="numero" />
+    <input id="txtEntrada3" type="number" name="numero" />
+    <input id="txtEntrada4" type="number" name="numero" />
+    <input id="txtEntrada5" type="number" name="numero" />
+    <input id="txtEntrada6" type="number" name="numero" />
+
+
+    <button onclick="calculo()">Resultado</button>
+    <script>
+        function calculo() {
+var entrada = document.getElementsByName("numero")
+console.log(entrada)
+for(var contador = 0;contador < entrada.length;contador++){
+    var numeroaleatorio = Math.floor(Math.random() * 60 + 1)
+    console.log(numeroaleatorio)
+           if(entrada[contador].value==numeroaleatorio){ 
+            console.log("acertou")
+        }
+        else{
+            console.log("errou")
+        }
+ }
+}
+    </script>
+</body>
+
+</html>
